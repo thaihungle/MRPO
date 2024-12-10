@@ -17,6 +17,6 @@ python run_mrpo.py llama ultrafeedback no hermes no 0.1 1 0  0.1 -1
 ```
 
 # Note
-- This implementation is for demo purpose, it only supports K=2 and does not compute the reference logprob in advance
+- This implementation is for demo purpose. Currentl, it only supports K=2 and does not compute the reference logprob in advance
 - If you want to know more about the hyperparameters, please refer to run_mrpo.py
-- If you want to refer to MRPO implementation, please refer to ./LLaMA-Factory/src/llmtuner/train/dpo/trainer_mref.py 
+- If you want to refer to MRPO implementation, please refer to ./src/llmtuner/train/dpo/trainer_mref.py 
