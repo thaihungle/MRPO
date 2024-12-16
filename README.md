@@ -13,6 +13,7 @@ pip install -r requirements.txt
 # Preference Learning Task
 - Prepare datasets: Please follow https://github.com/hiyouga/LLaMA-Factory/blob/main/data/README.md
 - Demo with a prepared dataset (comparison_gpt4_en):
+
 Example using MRPO with L<-M on gpt4 dataset
 ```
 python run_mrpo.py llama gpt4 no hermes no 0.99 1 0  0.1 -1
