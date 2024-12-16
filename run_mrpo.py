@@ -25,27 +25,18 @@ except:
 
 bases = {}
 bases["llama"] =  "Llama-2-7b-chat-hf" #path to llama model
-bases["mistral"] = "mistralai/Mistral-7B-v0.1"
-bases["hermes"] = "teknium/OpenHermes-2.5-Mistral-7B"
+bases["hermes"] = "teknium/OpenHermes-2.5-Mistral-7B" #path to mistral model
 
 
 
 data = {}
 data["gpt4"] = "comparison_gpt4_en"
-data["ultrafeedback"] = "ultrafeedback_binarized"
-data["math"] = "distilabel_math_preference"
-data["helpsteer"] = "helpsteer_binarized"
-data["nn"] = "nn_binarized"
-data["nectar"] = "nectar_binarized"
+
 
 
 val_steps = {}
 val_steps["comparison_gpt4_en"] = 20
-val_steps["ultrafeedback_binarized"] = 500
-val_steps["distilabel_math_preference"] = 100
-val_steps["helpsteer_binarized"] = 30
-val_steps["nn_binarized"] = 30
-val_steps["nectar_binarized"] = 500
+
 
 
 
@@ -54,8 +45,7 @@ ft_adaptors = {}
 
 ref_bases = {}
 ref_bases["llama"] =  "Llama-2-7b-chat-hf"  #path to llama model
-ref_bases["mistral"] = "mistralai/Mistral-7B-v0.1"
-ref_bases["hermes"] = "teknium/OpenHermes-2.5-Mistral-7B"
+ref_bases["hermes"] = "teknium/OpenHermes-2.5-Mistral-7B" #path to mistral model
 
 
 ref_adaptors = {}

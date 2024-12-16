@@ -5,15 +5,21 @@
 - Code reference: https://github.com/hiyouga/LLaMA-Factory 
 
 # Setup  
-python>=3.7
+python>=3.8
 ```
 pip install -r requirements.txt   
 ```
 
 # Preference Learning Task
-Example using L<-M on ultrafeedback dataset
+- Prepare datasets: Please follow https://github.com/hiyouga/LLaMA-Factory/blob/main/data/README.md
+- Demo with a prepared dataset (comparison_gpt4_en):
+Example using MRPO with L<-M on gpt4 dataset
 ```
-python run_mrpo.py llama ultrafeedback no hermes no 0.1 1 0  0.1 -1
+python run_mrpo.py llama gpt4 no hermes no 0.99 1 0  0.1 -1
+```
+Example using DPO with Llama on gpt4 dataset
+```
+python run_dpo.py llama gpt4 no 0.99 1 0
 ```
 
 # Note

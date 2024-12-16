@@ -298,6 +298,11 @@
     "file_sha1": "96fa18313544e22444fe20eead7754b17da452ae",
     "ranking": true
   },
+  "ultrafeedback_binarized": {
+    "file_name": "ultrafeedback_binarized.json",
+    "file_sha1": "83e3e0990e18bf6f2f8598c7123449f870a137b3",
+    "ranking": true
+  },
   "comparison_gpt4_zh": {
     "file_name": "comparison_gpt4_data_zh.json",
     "file_sha1": "515b18ed497199131ddcc1af950345c11dc5c7fd",

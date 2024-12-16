@@ -2,7 +2,7 @@ import os
 import sys
 
 # default param 1-llama (base1), 2-gpt4 (data) 3-no (ft1) 4-0.1 (eval) 5-1 (epoch) 6-0 (seed)
-# python run_dpo.py tiny ultrafeedback no 0.1 1 0
+# python run_dpo.py llama ultrafeedback no 0.1 1 0
 
 var1 = sys.argv[1]
 var2 = sys.argv[2]
@@ -13,26 +13,16 @@ var6 = sys.argv[6]
 
 bases = {}
 bases["llama"] =  "Llama-2-7b-chat-hf" #path to llama model
-bases["mistral"] = "mistralai/Mistral-7B-v0.1"
-bases["hermes"] = "teknium/OpenHermes-2.5-Mistral-7B"
-bases["tiny"] = "TinyLlama/TinyLlama-1.1B-Chat-v1.0"
+bases["hermes"] = "teknium/OpenHermes-2.5-Mistral-7B" #path to mistral model
 
 data = {}
 data["gpt4"] = "comparison_gpt4_en"
-data["ultrafeedback"] = "ultrafeedback_binarized"
-data["math"] = "distilabel_math_preference"
-data["helpsteer"] = "helpsteer_binarized"
-data["nn"] = "nn_binarized"
-data["nectar"] = "nectar_binarized"
+
 
 
 val_steps = {}
 val_steps["comparison_gpt4_en"] = 20
-val_steps["ultrafeedback_binarized"] = 500
-val_steps["distilabel_math_preference"] = 100
-val_steps["helpsteer_binarized"] = 30
-val_steps["nn_binarized"] = 30
-val_steps["nectar_binarized"] = 500
+
 
 
 ft_adaptors = {}
@@ -61,9 +51,7 @@ def run_exp(seed):
     for i in nbases:
         print(i)
         tr_bs = 2
-        if var1 == "tiny":
-            tr_bs=4
-            val_bs=4
+        
 
         lorat = "q_proj,v_proj"
 
